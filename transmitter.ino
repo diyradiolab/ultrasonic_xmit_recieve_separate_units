@@ -70,13 +70,10 @@ u8 get_key_press( u8 key_mask )
     OCR2A = timer2; //set value to trigger compare match. this determines the frequency on pin PORTB1
   }
 
-
 void set_serial(){
     Serial.begin(9600);
     Serial.println("HI");
 }
-
-
 
 int main() {
 
@@ -100,8 +97,7 @@ int main() {
   int mode = 0;
 
   while (1) {
- 
-    
+
       //f_set1
     
       if( get_key_press( 1<<KEY0) ){
@@ -121,19 +117,11 @@ int main() {
          }
       }
 
-
-
-    if( (get_key_press( 1<<KEY0) && (mode == 3) )){
-        set_timers(195,25);
-        mode = 1;
-        Serial.println(7);
-    }
     /*
     //f_set2
     if( get_key_press( 1<<KEY1 )){
         set_timers(204,25);
-*/
+    */
     
     }
    }
-}
