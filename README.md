@@ -2,3 +2,5 @@
 ultrasonic transmitter and receiver units. transmitter is at 40khz on and off. receiver has several output frequencies and on off. single button control of states to cycle between them
 
 This is for radio class
+
+.INO files are arduino files. By removing the serial port initialization code, the code will compile in Atmel Studio / AVR-GCC.
