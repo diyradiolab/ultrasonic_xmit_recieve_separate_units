@@ -3,4 +3,4 @@ ultrasonic transmitter and receiver units. transmitter is at 40khz on and off. r
 
 This is for radio class
 
-.INO files are arduino files.
+.INO files are arduino files. Code is mostly AVR-GCC C code.
