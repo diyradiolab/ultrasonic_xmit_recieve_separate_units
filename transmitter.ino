@@ -56,7 +56,7 @@ u8 get_key_press( u8 key_mask )
     TCCR1B |= (1 << CS10); // set prescaler to 0
     TCCR1B |= (1 << WGM12); //put timer 0 in ctc mode a mode where the top is defined in register OCR0A
     if(timer1 == -1){
-      TCCR1A &= (0 <<COM1A0); // turn on bits in compare match to toggle.
+      TCCR1A &= (0 <<COM1A0); // turn off bits in compare match to toggle.
     }
     else{
       TCCR1A |= (1 <<COM1A0); // turn on bits in compare match to toggle.
@@ -104,12 +104,18 @@ int main() {
 
         switch(mode){
           case 0:
-            set_timers(205,25);
+            set_timers(200,25);
             mode = 1;
             break;   
+            
+       
+          case 1:
+            set_timers(205,25);
+            mode = 2;
+            break;  
         
 
-          case 1:        
+          case 2:  //turns off oscillator      
             set_timers(-1,25);
             mode = 0;
             break;
@@ -123,5 +129,7 @@ int main() {
         set_timers(204,25);
     */
     
-    }
-   }
+      
+  }
+ }
+ 
