@@ -3,4 +3,4 @@ ultrasonic transmitter and receiver units. transmitter is at 40khz on and off. r
 
 This is for radio class
 
-.INO files are arduino files. By removing the serial port initialization code, the code will compile in Atmel Studio / AVR-GCC.
+.INO files are arduino files.
